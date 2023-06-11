@@ -14,17 +14,22 @@ def clicked_button():
 
         def withdraw():
             remove =ask1entry.get()
-            take=(print(int(balance)-int(remove)))
+            take=((int(balance)-int(remove)))
+
             do=str(take)
 
-            balance_label.config(text=("Your balance: "+do))
+            balance_label.config(text=("Your balance: "+str(do)))
 
             ask1_button.config(state=DISABLED)
             ask2_button.config(state=DISABLED)
 
         def deposit():
             remove =ask1entry.get()
-            x=print("New balance: "+str(int(balance)+int(remove)))
+            take = ((int(balance) + int(remove)))
+
+            do = str(take)
+
+            balance_label.config(text=("Your balance: " + str(do)))
             ask1_button.config(state=DISABLED)
             ask2_button.config(state=DISABLED)
 
