@@ -11,7 +11,7 @@ def clicked_button():
         username_entry.config(state=DISABLED)
         window.destroy()
         new_window = Tk()
-        bar = Progressbar(new_window, orient=HORIZONTAL, length=100)
+        
 
 
         def withdraw():
@@ -70,7 +70,7 @@ def clicked_button():
         balance_label.place(y=200,x=0)
         ask1_label.place(y=250,x=0)
         ask1_button.place(y=300,x=300)
-        bar.pack(pady=10)
+
         ask2_button.place(y=300,x=390)
         ask1entry.place(y=270,x=300)
         new_label1.pack()
