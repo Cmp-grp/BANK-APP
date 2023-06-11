@@ -14,16 +14,27 @@ def clicked_button():
 
         def withdraw():
             remove =ask1entry.get()
-            x=print("New balance: "+str(int(balance)-int(remove)))
+            take=(print(int(balance)-int(remove)))
+            do=str(take)
+
+            balance_label.config(text=("Your balance: "+do))
+
             ask1_button.config(state=DISABLED)
             ask2_button.config(state=DISABLED)
 
+        def deposit():
+            remove =ask1entry.get()
+            x=print("New balance: "+str(int(balance)+int(remove)))
+            ask1_button.config(state=DISABLED)
+            ask2_button.config(state=DISABLED)
 
         new_window.title('EREN BANK', )
         bg=PhotoImage(file='pg3.png')
         new_window.geometry('300x300')
         new_window.config(background='white')
+        global balance
         balance ='100000'
+
 
 
         new_label1 = Label( font=("Century Gothic", 20), text='Welcome to  Eren Bank',
@@ -34,8 +45,8 @@ def clicked_button():
         ask1_label = Label(text="Amount you want:",bg="white",font=('Century Gothic',20))
         ask1entry= Entry()
         ask1_button= Button(text="Withdraw",font=('Arial',10),command=withdraw)
-        ask2_button = Button(text='Deposit',font=('Arial',10),)
-        
+        ask2_button = Button(text='Deposit',font=('Arial',10),command=deposit)
+
 
 
 
